@@ -41,8 +41,8 @@ public class TestCases {
 	            List<WebElement> transactionRows = driver.findElements(By.xpath("//div[contains(@class, 'transactions')]//div[contains(@class, 'transaction-box')]"));
 
 	            for (WebElement row : transactionRows) {
-	                List<WebElement> inputs = row.findElements(By.xpath(".//div[contains(@class, 'vins')]//div[contains(@class, 'vin')]"));
-	                List<WebElement> outputs = row.findElements(By.xpath(".//div[contains(@class, 'vouts')]//div[contains(@class, 'vout')]"));
+	                List<WebElement> inputs = row.findElements(By.xpath(".//div[contains(@class, 'vins')]/div[contains(@class, 'vin')]"));
+	                List<WebElement> outputs = row.findElements(By.xpath(".//div[contains(@class, 'vouts')]/div[contains(@class, 'vout')]"));
 
 	                if (inputs.size() == 1 && outputs.size() == 2) {
 	                    // Print the transaction hash
